@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('npn install') {
+            steps {
+                npm install
+            }
+        }
+        stage('build') {
+            steps {
+               npm run build
+            }
+            
+        }
+        stage('console log') {
+            steps {
+               echo "i am done"
+            }
+        }
+    }
+}
