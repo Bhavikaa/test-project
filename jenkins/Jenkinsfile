@@ -2,16 +2,24 @@ pipeline {
     agent any
     stages {
         stage('npn install') {
-            sh 'npm install'
+            steps{
+                sh 'npm install'
+            }  
         }
         stage('build') {
-            sh 'npm run build'
+            steps{
+                sh 'npm run build'
+            } 
         }
         stage('Lint') {
-            sh 'ng lint'
+             steps{
+                sh 'npm lint'
+            } 
         }
         stage('console log') {
-            echo "deploying.."
+             steps{
+                echo "deploying.."
+            } 
         }
     }
 }
