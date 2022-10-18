@@ -10,7 +10,6 @@ pipeline {
             steps {
                npm run build
             }
-            
         }
         stage('console log') {
             steps {
