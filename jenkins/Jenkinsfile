@@ -1,6 +1,23 @@
 pipeline {
-    agent any
+    docker {
+            image 'node:latest'
+        }
     stages {
+         stage('console log') {
+             steps{
+                echo "starting.."
+            } 
+        }
+        stage('npm install') {
+            steps{
+                sh 'npm install'
+            }  
+        }
+        stage('build') {
+            steps{
+                sh 'ng build'
+            } 
+        }
         stage('console log') {
              steps{
                 echo "deploying.."
