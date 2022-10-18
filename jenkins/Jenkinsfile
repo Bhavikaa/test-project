@@ -1,20 +1,5 @@
 node {
     stages {
-        stage('npm install') {
-            steps{
-                sh 'npm install'
-            }  
-        }
-        stage('build') {
-            steps{
-                sh 'npm run build'
-            } 
-        }
-        stage('Lint') {
-             steps{
-                sh 'npm lint'
-            } 
-        }
         stage('console log') {
              steps{
                 echo "deploying.."
