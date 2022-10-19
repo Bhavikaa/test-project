@@ -5,7 +5,7 @@ pipeline {
         }
     }
     stages {
-         stage('console log') {
+         stage('console log start') {
              steps{
                 echo "starting.."
             } 
@@ -20,7 +20,7 @@ pipeline {
                 sh 'ng build'
             } 
         }
-        stage('console log') {
+        stage('console log end') {
              steps{
                 echo "deploying.."
             } 
