@@ -1,9 +1,5 @@
 pipeline {
-     agent {
-        docker {
-            image 'node'
-        }
-    }
+    agent any
     stages {
          stage('console log start') {
              steps{
